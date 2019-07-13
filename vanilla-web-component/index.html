@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vanilla Web Component</title>
+    <script src="win-loss-counter.js"></script>
+    <style>
+      .container {
+        width: 500px;
+      }
+      #messages {
+        padding: 5px 10px;
+        background: lightcyan;
+        margin-bottom: 15px;
+        border: 1px solid black;
+      }
+      .teams {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+      win-loss-counter {
+        margin-bottom: 15px;
+      }
+      win-loss-counter:not(:last-of-type) {
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vanilla Web Component</h1>
+
+    <div class="container">
+      <div id="messages">Click win / loss</div>
+
+      <div class="teams">
+        <win-loss-counter id="packers" team="Packers" color="seagreen">
+          <span slot="logo">🧀</span>
+        </win-loss-counter>
+        <br />
+        <win-loss-counter id="vikings" team="Vikings" color="violet">
+          <span slot="logo">🎆</span>
+        </win-loss-counter>
+      </div>
+
+      <div class="teams">
+        <win-loss-counter id="bears" team="Bears" color="orange">
+          <span slot="logo">🐻</span>
+        </win-loss-counter>
+        <br />
+        <win-loss-counter id="lions" team="Lions" color="cornflowerblue">
+          <span slot="logo">🦁</span>
+        </win-loss-counter>
+      </div>
+    </div>
+
+    <script>
+      ["packers", "vikings", "bears", "lions"].forEach(id => {
+        document.getElementById(id).addEventListener("recordChange", event => {
+          const data = event.detail;
+          document.getElementById("messages").innerText = `${data.team} have ${
+            data.value
+          } ${data.type}`;
+        });
+      });
+    </script>
+  </body>
+</html>
