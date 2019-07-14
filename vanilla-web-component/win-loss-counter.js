@@ -11,7 +11,7 @@ const templateContents = `
       .record {
         text-align: center;
         font-size: 1.5em;
-      }
+      } 
       .buttons {
         display: flex;
         justify-content: space-between;
@@ -34,7 +34,7 @@ const templateContents = `
 
 class WinLossCounter extends HTMLElement {
   static get observedAttributes() {
-    return ["color"];
+    return ['color'];
   }
 
   constructor() {
@@ -43,43 +43,43 @@ class WinLossCounter extends HTMLElement {
 
   // When element inserted into DOM
   connectedCallback() {
-    console.log("Custom element created");
+    console.log('Custom element created');
 
     // Get template
-    const template = document.createElement("div");
+    const template = document.createElement('div');
     template.innerHTML = templateContents;
 
     // Shadow root
-    this.root = this.attachShadow({ mode: "open" });
+    this.root = this.attachShadow({ mode: 'open' });
     this.root.appendChild(template.cloneNode(true));
 
     // Init the content
-    this.root.getElementById("teamName").innerText = this.getAttribute("team");
-    this.root.getElementById("wins").innerText = 0;
-    this.root.getElementById("losses").innerText = 0;
-    const background = this.getAttribute("color")
-      ? this.getAttribute("color")
-      : "lightgray";
+    this.root.getElementById('teamName').innerText = this.getAttribute('team');
+    this.root.getElementById('wins').innerText = 0;
+    this.root.getElementById('losses').innerText = 0;
+    const background = this.getAttribute('color')
+      ? this.getAttribute('color')
+      : 'lightgray';
     this.root
-      .getElementById("container")
-      .setAttribute("style", `background: ${background}`);
+      .getElementById('container')
+      .setAttribute('style', `background: ${background}`);
 
     this.root
-      .getElementById("win")
-      .addEventListener("click", this.incrementCount.bind(this, "wins"));
+      .getElementById('win')
+      .addEventListener('click', this.incrementCount.bind(this, 'wins'));
     this.root
-      .getElementById("loss")
-      .addEventListener("click", this.incrementCount.bind(this, "losses"));
+      .getElementById('loss')
+      .addEventListener('click', this.incrementCount.bind(this, 'losses'));
   }
 
   // When element removed from DOM
   disconnectedCallback() {
-    console.log("Custom element destroyed");
+    console.log('Custom element destroyed');
   }
 
   // When element moved
   adoptedCallback() {
-    console.log("Custom element moved");
+    console.log('Custom element moved');
   }
 
   // Called when attributes in `observedAttributes` are changed
@@ -89,13 +89,13 @@ class WinLossCounter extends HTMLElement {
       return;
     }
 
-    console.log("Custom element attributes have changed");
+    console.log('Custom element attributes have changed');
     console.log(`Attribute: ${name}  Old: ${oldValue}  New: ${newValue}`);
 
     if (newValue) {
       this.root
-        .getElementById("container")
-        .setAttribute("style", `background: ${newValue}`);
+        .getElementById('container')
+        .setAttribute('style', `background: ${newValue}`);
     }
   }
 
@@ -105,9 +105,9 @@ class WinLossCounter extends HTMLElement {
     element.innerText = newValue;
 
     this.dispatchEvent(
-      new CustomEvent("recordChange", {
+      new CustomEvent('recordChange', {
         detail: {
-          team: this.getAttribute("team"),
+          team: this.getAttribute('team'),
           value: newValue,
           type: id
         }
@@ -116,4 +116,4 @@ class WinLossCounter extends HTMLElement {
   }
 }
 
-customElements.define("win-loss-counter", WinLossCounter);
+customElements.define('win-loss-counter', WinLossCounter);
