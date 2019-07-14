@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+  background: #6f0a0a;
+  padding: 5px 15px;
+  box-shadow: 0 2px 5px 0px #000000;
+  color: #ffcaca;
+  margin-bottom: 5px;
+}
+
+.text {
+  display: flex;
+  flex: 1 1 auto;
+  color: #ffcaca;
+  font-size: 1.25rem;
+}
+
+.github {
+  display: flex;
+  flex: 0 0 auto;
+}
