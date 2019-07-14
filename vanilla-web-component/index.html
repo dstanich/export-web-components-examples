@@ -7,23 +7,26 @@
     <style>
       .container {
         width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
       #messages {
+        flex: 1 1 100%;
         padding: 5px 10px;
         background: lightcyan;
         margin-bottom: 15px;
         border: 1px solid black;
       }
-      .teams {
+      .team {
+        flex: 0 0 45%;
+        margin-bottom: 30px;
+      }
+      .buttons {
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-      }
-      win-loss-counter {
-        margin-bottom: 15px;
-      }
-      win-loss-counter:not(:last-of-type) {
-        margin-right: 15px;
+        flex: 1 1 auto;
+        justify-content: center;
+        margin-top: 5px;
       }
     </style>
   </head>
@@ -33,24 +36,52 @@
     <div class="container">
       <div id="messages">Click win / loss</div>
 
-      <div class="teams">
+      <div id="packers-card" class="team">
         <win-loss-counter id="packers" team="Packers" color="seagreen">
           <span slot="logo">🧀</span>
         </win-loss-counter>
-        <br />
-        <win-loss-counter id="vikings" team="Vikings" color="violet">
-          <span slot="logo">🎆</span>
-        </win-loss-counter>
+        <div class="buttons">
+          <button onclick="changeColor('packers')">
+            Change Color
+          </button>
+          <button onclick="removeCard('packers-card')">Remove</button>
+        </div>
       </div>
 
-      <div class="teams">
+      <div id="vikings-card" class="team">
+        <win-loss-counter id="vikings" team="Vikings" color="violet">
+          <span slot="logo">😈</span>
+        </win-loss-counter>
+        <div class="buttons">
+          <button onclick="changeColor('vikings')">
+            Change Color
+          </button>
+          <button onclick="removeCard('vikings-card')">Remove</button>
+        </div>
+      </div>
+
+      <div id="bears-card" class="team">
         <win-loss-counter id="bears" team="Bears" color="orange">
           <span slot="logo">🐻</span>
         </win-loss-counter>
-        <br />
+        <div class="buttons">
+          <button onclick="changeColor('bears')">
+            Change Color
+          </button>
+          <button onclick="removeCard('bears-card')">Remove</button>
+        </div>
+      </div>
+
+      <div id="lions-card" class="team">
         <win-loss-counter id="lions" team="Lions" color="cornflowerblue">
           <span slot="logo">🦁</span>
         </win-loss-counter>
+        <div class="buttons">
+          <button onclick="changeColor('lions')">
+            Change Color
+          </button>
+          <button onclick="removeCard('lions-card')">Remove</button>
+        </div>
       </div>
     </div>
 
@@ -63,6 +94,15 @@
           } ${data.type}`;
         });
       });
+
+      function changeColor(id) {
+        const color = prompt("Please enter a new color");
+        document.getElementById(id).setAttribute("color", color);
+      }
+
+      function removeCard(id) {
+        document.getElementById(id).remove();
+      }
     </script>
   </body>
 </html>

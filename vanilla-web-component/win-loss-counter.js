@@ -3,7 +3,6 @@ const templateContents = `
       #container {
         padding: 5px 10px;
         border: 1px solid black;
-        width: 200px;
       }
       #teamName {
         font-size: 2em;
@@ -34,6 +33,10 @@ const templateContents = `
 `;
 
 class WinLossCounter extends HTMLElement {
+  static get observedAttributes() {
+    return ["color"];
+  }
+
   constructor() {
     super();
   }
@@ -81,11 +84,18 @@ class WinLossCounter extends HTMLElement {
 
   // Called when attributes in `observedAttributes` are changed
   attributeChangedCallback(name, oldValue, newValue) {
+    // Ignore initial call
+    if (!oldValue) {
+      return;
+    }
+
     console.log("Custom element attributes have changed");
     console.log(`Attribute: ${name}  Old: ${oldValue}  New: ${newValue}`);
 
-    if (this.root) {
-      this.updateRootText(newValue);
+    if (newValue) {
+      this.root
+        .getElementById("container")
+        .setAttribute("style", `background: ${newValue}`);
     }
   }
 
