@@ -9,7 +9,7 @@ import GroceryList from './GroceryList/GroceryList';
 const dataService = new DataService();
 
 function App() {
-  const [items, setItems] = useState([dataService.items]);
+  const [items, setItems] = useState(dataService.items);
 
   const groceryAdded = item => {
     dataService.addItem(item);
