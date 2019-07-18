@@ -1,0 +1,8 @@
+<app-title [text]="'Angular Groceries'"></app-title>
+<div class="scrollable-area">
+  <app-add-grocery (groceryAdded)="groceryAdded($event)"></app-add-grocery>
+  <app-grocery-list
+    [items]="groceryItems"
+    (itemClicked)="groceryItemClicked($event)"
+  ></app-grocery-list>
+</div>

@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffcaca;
+  overflow: hidden;
+}
+
+app-title {
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.scrollable-area {
+  display: block;
+  flex: 1 1 auto;
+  overflow: auto;
+
+  app-add-grocery {
+    margin-top: 2rem;
+  }
+
+  app-grocery-list {
+    margin-top: 2rem;
+  }
+}

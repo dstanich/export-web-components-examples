@@ -1,0 +1,12 @@
+<div *ngIf="items?.length > 0" class="main-container">
+  <h1>Groceries</h1>
+  <button
+    *ngFor="let item of items; let i = index"
+    class="grocery-item"
+    [class.grocery-item--removed]="item.removed"
+    (click)="handleItemClicked(item)"
+  >
+    <span class="grocery-item-count">{{ i + 1 }}.</span>
+    <span>{{ item.name }}</span>
+  </button>
+</div>
