@@ -6,7 +6,7 @@
         v-for="(item, index) in items"
         :key="item.name"
         :class="['grocery-item', item.removed ? 'grocery-item--removed' : '']"
-        @click="$emit('item-clicked', item.name)"
+        @click="$emit('itemClicked', item.name)"
       >
         <span class="grocery-item-count">{{ index + 1 }}.</span>
         <span>{{ item.name }}</span>

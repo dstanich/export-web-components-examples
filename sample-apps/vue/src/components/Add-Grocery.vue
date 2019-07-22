@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     addItem: function() {
-      this.$emit('grocery-added', this.item);
+      this.$emit('groceryAdded', this.item);
       this.item = '';
     }
   }

@@ -3,10 +3,10 @@
     <Title text="Vue Groceries" />
     <div class="scrollable-area">
       <div class="add-grocery">
-        <Add-Grocery @grocery-added="groceryAdded" />
+        <Add-Grocery @groceryAdded="groceryAdded" />
       </div>
       <div class="grocery-list">
-        <Grocery-List :items="groceryItems" @item-clicked="groceryItemClicked" />
+        <Grocery-List :items="groceryItems" @itemClicked="groceryItemClicked" />
       </div>
     </div>
   </div>

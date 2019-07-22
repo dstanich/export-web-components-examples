@@ -1,12 +1,12 @@
 <template>
   <div class="grocery-list">
-    <div v-if="items.length > 0" class="main-container">
+    <div v-if="items && items.length > 0" class="main-container">
       <h1>Groceries</h1>
       <button
         v-for="(item, index) in items"
         :key="item.name"
         :class="['grocery-item', item.removed ? 'grocery-item--removed' : '']"
-        @click="$emit('item-clicked', item.name)"
+        @click="$emit('itemClicked', item.name)"
       >
         <span class="grocery-item-count">{{ index + 1 }}.</span>
         <span>{{ item.name }}</span>
