@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:wc": "ng build --prod --output-hashing none && npm run build:wc:concat-build-files && npm run build:wc:copy-out",
-    "build:wc:concat-build-files": "cd dist/groceries && cat runtime-es2015* polyfills-es2015* main-es2015* > angular-elements-es2015.js",
+    "build:wc": "ng build --prod --output-hashing none --optimization=false && npm run build:wc:concat-build-files && npm run build:wc:copy-out",
+    "build:wc:concat-build-files": "cd dist/groceries && cat polyfills-es2015* runtime-es2015* main-es2015* > angular-elements-es2015.js",
     "build:wc:copy-out": "pwd; cp dist/groceries/angular-elements-es2015.js ../built-output/angular"
   },
   "private": true,
