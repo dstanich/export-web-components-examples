@@ -6,7 +6,8 @@ This folder is an example of how to change your Angular app so it exports custom
 
 ### 1. Install @angular/elements
 
-1. `npm install @angular/elements --save`
+1. `ng add @angular/elements`
+   - This adds the required packages and injects scripts into `angular.json`.
 
 ### 2. Updates to `app.module.ts`
 
