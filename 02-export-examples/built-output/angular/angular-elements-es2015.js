@@ -3129,7 +3129,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/dstanich/code/export-web-components-examples/export-examples/angular/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /Users/dstanich/code/export-web-components-examples/02-export-examples/angular/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })
@@ -73243,7 +73243,7 @@ let AddGroceryComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.item);
             }
-        }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgModel"]], styles: ["[_nghost-%COMP%] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n}\n\ninput[_ngcontent-%COMP%] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-flex: 0;\n          flex: 0 0 75%;\n  font-size: 1.5rem;\n  padding: 10px 15px;\n  border: 1px solid #420846;\n  color: #6f0a0a;\n}\n\ninput[_ngcontent-%COMP%]::-webkit-input-placeholder {\n  color: #6f0a0a;\n}\n\ninput[_ngcontent-%COMP%]::-moz-placeholder {\n  color: #6f0a0a;\n}\n\ninput[_ngcontent-%COMP%]::-ms-input-placeholder {\n  color: #6f0a0a;\n}\n\ninput[_ngcontent-%COMP%]::placeholder {\n  color: #6f0a0a;\n}"] });
+        }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgModel"]], styles: ["[_nghost-%COMP%] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n}\n\ninput[_ngcontent-%COMP%] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-flex: 0;\n          flex: 0 0 75%;\n  font-size: 1.5rem;\n  padding: 10px 15px;\n  border: 1px solid #420846;\n  color: #6f0a0a;\n  background: #ffe4e4;\n}\n\ninput[_ngcontent-%COMP%]::-webkit-input-placeholder {\n  color: #6f0a0a;\n}\n\ninput[_ngcontent-%COMP%]::-moz-placeholder {\n  color: #6f0a0a;\n}\n\ninput[_ngcontent-%COMP%]::-ms-input-placeholder {\n  color: #6f0a0a;\n}\n\ninput[_ngcontent-%COMP%]::placeholder {\n  color: #6f0a0a;\n}"] });
     /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AddGroceryComponent, [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
             args: [{
@@ -73537,7 +73537,7 @@ let GroceryListComponent = /*@__PURE__*/ (() => {
             if (rf & 2) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", (ctx.items == null ? null : ctx.items.length) > 0);
             }
-        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: ["[_nghost-%COMP%] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  padding-bottom: 15px;\n}\n\nh1[_ngcontent-%COMP%] {\n  color: #6f0a0a;\n}\n\n.main-container[_ngcontent-%COMP%] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-flex: 0;\n          flex: 0 0 75%;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n          flex-direction: column;\n  -webkit-box-align: center;\n          align-items: center;\n  background: #ffffff;\n  box-shadow: 1px 1px 5px 1px #000000;\n  padding: 10px 15px;\n}\n\n.main-container[_ngcontent-%COMP%]   .grocery-item[_ngcontent-%COMP%] {\n  display: -webkit-box;\n  display: flex;\n  width: 85%;\n  font-size: 1.25rem;\n  padding: 10px;\n  margin: 5px;\n  border: none;\n  background: transparent;\n  cursor: pointer;\n}\n\n.main-container[_ngcontent-%COMP%]   .grocery-item--removed[_ngcontent-%COMP%] {\n  opacity: 0.5;\n  text-decoration: line-through;\n}\n\n.main-container[_ngcontent-%COMP%]   .grocery-item-count[_ngcontent-%COMP%] {\n  width: 50px;\n}"] });
+        }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: ["[_nghost-%COMP%] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  padding-bottom: 15px;\n}\n\nh1[_ngcontent-%COMP%] {\n  color: #6f0a0a;\n}\n\n.main-container[_ngcontent-%COMP%] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-flex: 0;\n          flex: 0 0 75%;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n          flex-direction: column;\n  -webkit-box-align: center;\n          align-items: center;\n  background: #ffe4e4;\n  box-shadow: 1px 1px 5px 1px #000000;\n  padding: 10px 15px;\n}\n\n.main-container[_ngcontent-%COMP%]   .grocery-item[_ngcontent-%COMP%] {\n  display: -webkit-box;\n  display: flex;\n  width: 85%;\n  font-size: 1.25rem;\n  padding: 10px;\n  margin: 5px;\n  border: none;\n  background: transparent;\n  cursor: pointer;\n}\n\n.main-container[_ngcontent-%COMP%]   .grocery-item--removed[_ngcontent-%COMP%] {\n  opacity: 0.5;\n  text-decoration: line-through;\n}\n\n.main-container[_ngcontent-%COMP%]   .grocery-item-count[_ngcontent-%COMP%] {\n  width: 50px;\n}"] });
     /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GroceryListComponent, [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
             args: [{
@@ -73656,7 +73656,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().boot
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/dstanich/code/export-web-components-examples/export-examples/angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/dstanich/code/export-web-components-examples/02-export-examples/angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })
