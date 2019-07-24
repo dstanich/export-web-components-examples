@@ -40,6 +40,7 @@ input {
   padding: 10px 15px;
   border: 1px solid #420846;
   color: #07531b;
+  background: #e3ffef;
 
   &::placeholder {
     color: #07531b;

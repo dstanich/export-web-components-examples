@@ -40,7 +40,7 @@ h1 {
   flex: 0 0 75%;
   flex-direction: column;
   align-items: center;
-  background: #ffffff;
+  background: #e3ffef;
   box-shadow: 1px 1px 5px 1px #000000;
   padding: 10px 15px;
 
