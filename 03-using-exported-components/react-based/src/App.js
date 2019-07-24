@@ -46,7 +46,7 @@ function App() {
           <angular-add-grocery ref={addGrocery} />
         </div>
         <div className="grocery-list">
-          <vue-grocery-list ref={groceryList} />
+          <vue-wc-grocery-list ref={groceryList} />
         </div>
       </div>
     </div>

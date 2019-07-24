@@ -5,13 +5,16 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "vue": "^2.6.10"
   },
   "scripts": {
-    "copy-built-output": "rm -rf ./public/exported && cp -R ../../export-examples/built-output/ ./public/exported",
-    "prestart": "npm run copy-built-output",
+    "copy:prereqs": "npm run copy:vendor && npm run copy:built:output",
+    "copy:built:output": "rm -rf ./public/exported && cp -R ../../02-export-examples/built-output/ ./public/exported",
+    "copy:vendor": "rm -rf ./public/vendor && mkdir ./public/vendor && cp node_modules/vue/dist/vue.min.js ./public/vendor/",
+    "prestart": "npm run copy:vendor && npm run copy:prereqs",
     "start": "react-scripts start",
-    "prebuild": "npm run copy-built-output",
+    "prebuild": "npm run copy:prereqs",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
