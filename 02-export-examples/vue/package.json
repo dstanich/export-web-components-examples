@@ -7,8 +7,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:wc": "npm run build:wc:components",
-    "build:wc:components": "vue-cli-service build --target wc --name vue './src/components/*.vue'"
+    "build:wc": "npm run build:wc:components && npm run build:wc:copy-to-built",
+    "build:wc:components": "vue-cli-service build --target wc --name vue-wc './src/components/*.vue'",
+    "build:wc:copy-to-built": "cp -R dist/* ../built-output/vue/"
   },
   "dependencies": {
     "core-js": "^2.6.5",
