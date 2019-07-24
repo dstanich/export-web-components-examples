@@ -1,0 +1,21 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #aeb7d5;
+  overflow: hidden;
+}
+
+.scrollable-area {
+  display: block;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.add-grocery {
+  margin-top: 2rem;
+}
+
+.grocery-list {
+  margin-top: 2rem;
+}

@@ -1,0 +1,34 @@
+{
+  "name": "groceries",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "copy-built-output": "rm -rf ./public/exported && cp -R ../../export-examples/built-output/ ./public/exported",
+    "prestart": "npm run copy-built-output",
+    "start": "react-scripts start",
+    "prebuild": "npm run copy-built-output",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
