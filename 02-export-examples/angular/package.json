@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "build:wc": "ng build --prod --output-hashing none --optimization=false --extraWebpackConfig webpack.extra.js --single-bundle true && npm run build:wc:copy-deps && npm run build:wc:copy-to-built",
     "build:wc:copy-deps": "node copy-bundles.js",
-    "build:wc:copy-to-built": "rm -rf ../built-output/angular/* && cp -R dist/groceries/* ../built-output/angular/"
+    "build:wc:copy-to-built": "rm -rf ../built-output/angular && mkdir ../built-output/angular && cp -R dist/groceries/* ../built-output/angular/"
   },
   "private": true,
   "dependencies": {
