@@ -129,7 +129,7 @@ function buildStep02() {
   //TODO TBD
 
   // Vue
-  let frameworkDir = 'vue';
+  frameworkDir = 'vue';
   execSync(
     `npm --prefix ${SRC_EXPORT_EXAMPLES}/${frameworkDir} install`,
     EXEC_OPTS
