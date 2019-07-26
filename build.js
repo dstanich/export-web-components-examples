@@ -21,6 +21,7 @@ if (fs.existsSync(DIR_BUILD)) {
 }
 
 // Run all builds
+buildLandingPage();
 buildStep00();
 buildStep01();
 
@@ -30,14 +31,18 @@ function logEntry(statement) {
   console.log('****************************');
 }
 
+function buildLandingPage() {
+  const STEP = 'xx-Landing page';
+  logEntry(`BUILDING STEP ${STEP}`);
+  execSync(`cp index.html ${DIR_BUILD}`, EXEC_OPTS);
+  logEntry(`COMPLETE STEP ${STEP}`);
+}
+
 function buildStep00() {
   const STEP = '00-vanilla web component';
   logEntry(`BUILDING STEP ${STEP}`);
 
-  // Create dir
   fs.mkdirSync(BUILD_VANILLA, { recursive: true });
-
-  // Copy files
   execSync(`cp -R ${SRC_VANILLA_WEB_COMPONENT}/* ${BUILD_VANILLA}`, EXEC_OPTS);
 
   logEntry(`COMPLETE STEP ${STEP}`);

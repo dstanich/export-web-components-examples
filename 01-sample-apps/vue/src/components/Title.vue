@@ -4,7 +4,7 @@
     <a
       class="github"
       aria-label="GitHub"
-      href="https://github.com/dstanich/angular-elements-presentation"
+      href="https://github.com/dstanich/export-web-components-examples"
       target="_blank"
     >
       <img src="@/assets/GitHub-Mark-Light-32px.png" />
