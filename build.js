@@ -143,7 +143,7 @@ function buildStep02() {
 }
 
 function buildStep03() {
-  const STEP = '02-using exported component';
+  const STEP = '03-using exported component';
   logEntry(`BUILDING STEP ${STEP}`);
 
   // Create dirs
@@ -159,7 +159,7 @@ function buildStep03() {
     EXEC_OPTS
   );
   execSync(
-    `cp -R ${SRC_SAMPLE_APPS}/${frameworkDir}/build/* ${BUILD_MIXED_APPS}/${frameworkDir}`,
+    `cp -R ${SRC_MIXED_APPS}/${frameworkDir}/build/* ${BUILD_MIXED_APPS}/${frameworkDir}`,
     EXEC_OPTS
   );
 
