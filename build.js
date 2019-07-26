@@ -34,6 +34,7 @@ function logEntry(statement) {
 function buildLandingPage() {
   const STEP = 'xx-Landing page';
   logEntry(`BUILDING STEP ${STEP}`);
+  fs.mkdirSync(DIR_BUILD, { recursive: true });
   execSync(`cp index.html ${DIR_BUILD}`, EXEC_OPTS);
   logEntry(`COMPLETE STEP ${STEP}`);
 }
