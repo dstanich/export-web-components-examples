@@ -1,0 +1,7 @@
+{
+  "name": "export-web-components-examples",
+  "version": "1.0.0",
+  "dependencies": {
+    "del": "^5.0.0"
+  }
+}
