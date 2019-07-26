@@ -10,7 +10,7 @@
   },
   "scripts": {
     "copy:prereqs": "npm run copy:built:output",
-    "copy:built:output": "pwd && rm -rf public/exported && mkdir public/exported && ls -a && cp -R ../../02-export-examples/built-output/* public/exported && ls -a public/",
+    "copy:built:output": "rm -rf public/exported && mkdir public/exported && cp -R ../../02-export-examples/built-output/* public/exported",
     "prestart": "npm run copy:prereqs",
     "start": "react-scripts start",
     "prebuild": "npm run copy:prereqs",
