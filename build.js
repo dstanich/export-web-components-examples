@@ -147,12 +147,12 @@ function buildStep03() {
   logEntry(`BUILDING STEP ${STEP}`);
 
   // Create dirs
-  [/*'angular', */ 'react' /*, 'vue'*/].forEach(framework => {
+  [/*'angular', */ 'react-based' /*, 'vue'*/].forEach(framework => {
     fs.mkdirSync(`${BUILD_MIXED_APPS}/${framework}`, { recursive: true });
   });
 
   // React based
-  let frameworkDir = 'react';
+  let frameworkDir = 'react-based';
   execSync(`npm --prefix ${SRC_MIXED_APPS}/${frameworkDir} install`, EXEC_OPTS);
   execSync(
     `npm --prefix ${SRC_MIXED_APPS}/${frameworkDir} run build`,
