@@ -1,11 +1,18 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewEncapsulation
+} from '@angular/core';
 
 import { Item } from '../data.service';
 
 @Component({
   selector: 'app-grocery-list',
   templateUrl: './grocery-list.component.html',
-  styleUrls: ['./grocery-list.component.scss']
+  styleUrls: ['./grocery-list.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class GroceryListComponent {
   @Input() items: Array<Item>;
