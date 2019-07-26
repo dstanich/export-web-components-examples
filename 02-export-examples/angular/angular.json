@@ -14,9 +14,11 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
-        "test": {},
+        "test": {
+          "builder": "ngx-build-plus:karma"
+        },
         "build": {
-          "builder": "ngx-build-plus:build",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/groceries",
             "index": "src/index.html",
@@ -24,8 +26,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": [
               {
                 "input": "node_modules/document-register-element/build/document-register-element.js"
