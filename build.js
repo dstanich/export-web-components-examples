@@ -162,6 +162,7 @@ function buildStep03() {
     `cp -R ${SRC_MIXED_APPS}/${frameworkDir}/build/* ${BUILD_MIXED_APPS}/${frameworkDir}`,
     EXEC_OPTS
   );
+  execSync(`ls -a ${BUILD_MIXED_APPS}/${frameworkDir}`, EXEC_OPTS);
 
   logEntry(`COMPLETE STEP ${STEP}`);
 }
