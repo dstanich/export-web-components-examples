@@ -13,6 +13,7 @@ const BUILD_MIXED_APPS = `${DIR_BUILD}/mixed-apps`;
 const SRC_VANILLA_WEB_COMPONENT = '00-vanilla-web-component';
 const SRC_SAMPLE_APPS = '01-sample-apps';
 const SRC_EXPORT_EXAMPLES = '02-export-examples';
+const SRC_MIXED_APPS = '03-using-exported-components';
 
 const EXEC_OPTS = { stdio: 'inherit' };
 
@@ -26,6 +27,7 @@ buildLandingPage();
 buildStep00();
 buildStep01();
 buildStep02();
+buildStep03();
 
 function logEntry(statement) {
   console.log('****************************');
@@ -134,6 +136,30 @@ function buildStep02() {
   );
   execSync(
     `npm --prefix ${SRC_EXPORT_EXAMPLES}/${frameworkDir} run build:wc`,
+    EXEC_OPTS
+  );
+
+  logEntry(`COMPLETE STEP ${STEP}`);
+}
+
+function buildStep03() {
+  const STEP = '02-using exported component';
+  logEntry(`BUILDING STEP ${STEP}`);
+
+  // Create dirs
+  [/*'angular', */ 'react' /*, 'vue'*/].forEach(framework => {
+    fs.mkdirSync(`${BUILD_MIXED_APPS}/${framework}`, { recursive: true });
+  });
+
+  // React based
+  let frameworkDir = 'react';
+  execSync(`npm --prefix ${SRC_MIXED_APPS}/${frameworkDir} install`, EXEC_OPTS);
+  execSync(
+    `npm --prefix ${SRC_MIXED_APPS}/${frameworkDir} run build`,
+    EXEC_OPTS
+  );
+  execSync(
+    `cp -R ${SRC_SAMPLE_APPS}/${frameworkDir}/build/* ${BUILD_MIXED_APPS}/${frameworkDir}`,
     EXEC_OPTS
   );
 
