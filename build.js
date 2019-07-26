@@ -121,8 +121,8 @@ function buildStep02() {
     EXEC_OPTS
   );
   execSync(
-    `npm --prefix ${SRC_EXPORT_EXAMPLES}/${frameworkDir} run build:wc`,
-    EXEC_OPTS
+    `npm --prefix ${SRC_EXPORT_EXAMPLES}/${frameworkDir} run build:wc`
+    // EXEC_OPTS {} // Do not pipe stdout for this one, it clutters the log
   );
 
   // React
