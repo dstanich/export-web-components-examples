@@ -30,5 +30,6 @@ Necessary to get the feature enabled to export to web component.
 
 This example adds scripts to `package.json` to do this.
 
-1. Step 1: builds all components in `./src/components` directory
-1. Step 2: prefix is `vue-wc` so result will be like this: `<vue-wc-title>`
+1. Builds all components in `./src/components` directory
+1. Prefix is `vue-wc` so result will be like this: `<vue-wc-title>`
+1. Copies Vue runtime as a dependency

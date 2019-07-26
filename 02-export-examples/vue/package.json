@@ -7,9 +7,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:wc": "npm run build:wc:components && npm run build:wc:copy-to-built",
+    "build:wc": "npm run build:wc:components && npm run build:wc:copy-vendor && npm run build:wc:copy-to-built",
     "build:wc:components": "vue-cli-service build --target wc --name vue-wc './src/components/*.vue'",
-    "build:wc:copy-to-built": "rm -rf ../built-output/vue && mkdir ../built-output/vue && cp -R dist/* ../built-output/vue/"
+    "build:wc:copy-to-built": "rm -rf ../built-output/vue && mkdir ../built-output/vue && cp -R dist/* ../built-output/vue/",
+    "build:wc:copy-vendor": "rm -rf dist/bundles && mkdir dist/bundles && cp node_modules/vue/dist/vue.min.js dist/bundles"
   },
   "dependencies": {
     "core-js": "^2.6.5",
