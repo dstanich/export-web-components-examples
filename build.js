@@ -23,9 +23,9 @@ if (fs.existsSync(DIR_BUILD)) {
 }
 
 // Run all builds
-// buildLandingPage();
-// buildStep00();
-// buildStep01();
+buildLandingPage();
+buildStep00();
+buildStep01();
 buildStep02();
 buildStep03();
 
