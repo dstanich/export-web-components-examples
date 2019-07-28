@@ -1,4 +1,4 @@
-# Using `vue-cli` web component export
+# Exporting Vue to web components
 
 This folder is an example of how to use the `vue-cli` and related packages to export Vue components as web components with minimal or no changes. This is an officially supported feature of the CLI tools and is extremely simple to do.
 

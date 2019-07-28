@@ -1,4 +1,4 @@
-# Using `@angular/elements`
+# Exporting Angular to web components
 
 This folder is an example of how to change your Angular app so it exports custom elements/web components using the `@angular/elements` and `ngx-build-plus` packages. Combining these two packages is the most reliable way to use Elements right now since Angular and the official CLI don't yet support it.
 
