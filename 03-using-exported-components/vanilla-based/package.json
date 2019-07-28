@@ -1,0 +1,15 @@
+{
+  "name": "vanilla-based",
+  "version": "1.0.0",
+  "scripts": {
+    "copy:prereqs": "npm run copy:built:output",
+    "copy:built:output": "rm -rf exported && mkdir exported && cp -R ../../02-export-examples/built-output/* exported/",
+    "prestart": "npm run copy:prereqs",
+    "start": "http-server .",
+    "prebuild": "npm run copy:prereqs",
+    "build": "echo 'todo'"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

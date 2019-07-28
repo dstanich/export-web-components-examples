@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <react-title text="Mixed Framework Groceries" />
+      <react-title text="Mixed Example - React Groceries" />
       <div className="scrollable-area">
         <div className="add-grocery">
           <angular-add-grocery ref={addGrocery} />

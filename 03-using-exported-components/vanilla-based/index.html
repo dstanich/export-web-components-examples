@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+    <!-- Import Vue and exported components -->
+    <script src="./exported/vue/bundles/vue.min.js"></script>
+    <script src="./exported/vue/vue-wc.min.js"></script>
+
+    <!-- Import React exported components -->
+    <script src="./exported/react/react-components.js"></script>
+
+    <!-- Import Angular dependencies and exported components -->
+    <script src="./exported/angular/bundles/native-shim.js"></script>
+    <script src="./exported/angular/bundles/zone.min.js"></script>
+    <script src="./exported/angular/bundles/rxjs.umd.min.js"></script>
+    <script src="./exported/angular/bundles/core.umd.js"></script>
+    <script src="./exported/angular/bundles/common.umd.js"></script>
+    <script src="./exported/angular/bundles/platform-browser.umd.js"></script>
+    <script src="./exported/angular/bundles/elements.umd.js"></script>
+    <script src="./exported/angular/main-es2015.js"></script>
+
+    <!-- Data service -->
+    <script src="./data.service.js"></script>
+
+    <title>Mixed Example - Vanilla Groceries</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div>
+      <angular-title text="Mixed Example - Vanilla Groceries"></angular-title>
+      <div class="scrollable-area">
+        <div class="add-grocery">
+          <vue-wc-add-grocery id="addGrocery"></vue-wc-add-grocery>
+        </div>
+        <div class="grocery-list">
+          <react-grocery-list id="groceryList"></react-grocery-list>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const dataService = new DataService();
+
+      document
+        .getElementById('addGrocery')
+        .addEventListener('groceryAdded', function(event) {
+          const item = event.detail[0];
+          dataService.addItem(item);
+
+          document.getElementById('groceryList').items = dataService.items;
+        });
+
+      document
+        .getElementById('groceryList')
+        .addEventListener('itemClicked', function(event) {
+          dataService.toggleItemStatus(event.detail);
+          document.getElementById('groceryList').items = dataService.items;
+        });
+    </script>
+  </body>
+</html>
