@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import './App.css';
 import { DataService } from './data.service';
-import Title from './Title/Title';
 
 const dataService = new DataService();
 
@@ -40,7 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <Title text="Mixed Framework Groceries" />
+      <react-title text="Mixed Framework Groceries" />
       <div className="scrollable-area">
         <div className="add-grocery">
           <angular-add-grocery ref={addGrocery} />
