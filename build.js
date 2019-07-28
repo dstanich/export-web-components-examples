@@ -126,7 +126,15 @@ function buildStep02() {
   );
 
   // React
-  //TODO TBD
+  frameworkDir = 'react';
+  execSync(
+    `npm --prefix ${SRC_EXPORT_EXAMPLES}/${frameworkDir} install`,
+    EXEC_OPTS
+  );
+  execSync(
+    `npm --prefix ${SRC_EXPORT_EXAMPLES}/${frameworkDir} run build:wc`,
+    EXEC_OPTS
+  );
 
   // Vue
   frameworkDir = 'vue';

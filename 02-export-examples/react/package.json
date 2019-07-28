@@ -6,13 +6,18 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "web-react-components": "^1.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:wc": "rm -rf dist && npm run build:wc:parcel && npm run build:wc:reset-output && npm run build:wc:copy-to-built",
+    "build:wc:parcel": "parcel build src/export-components.js -o react-components.js",
+    "build:wc:reset-output": "rm -rf ../built-output/react && mkdir -p ../built-output/react",
+    "build:wc:copy-to-built": "cp -R dist/* ../built-output/react/"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,5 +33,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "parcel": "^1.12.3"
   }
 }
