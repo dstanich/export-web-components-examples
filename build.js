@@ -173,6 +173,7 @@ function buildStep03() {
 
   // Vanilla based
   frameworkDir = 'vanilla-based';
+  fs.mkdirSync(`${BUILD_MIXED_APPS}/${frameworkDir}`, { recursive: true });
   execSync(
     `cp -R ${SRC_MIXED_APPS}/${frameworkDir}/* ${BUILD_MIXED_APPS}/${frameworkDir}`,
     EXEC_OPTS
