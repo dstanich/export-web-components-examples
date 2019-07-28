@@ -1,7 +1,7 @@
 import React from 'react';
+import { register } from 'web-react-components';
 
 // import './GroceryList.css';
-
 const styles = `
   .GroceryList {
     display: flex;
@@ -52,7 +52,7 @@ function GroceryList(props) {
   return (
     <div className="GroceryList">
       <style type="text/css">{styles}</style>
-      {props.items.length > 0 ? (
+      {props.items && props.items.length > 0 ? (
         <div className="main-container">
           <h1>Groceries</h1>
 
@@ -75,5 +75,9 @@ function GroceryList(props) {
     </div>
   );
 }
+
+register(GroceryList, 'react-grocery-list', ['items'], {
+  itemClicked: e => new CustomEvent('itemClicked', { detail: e })
+});
 
 export default GroceryList;

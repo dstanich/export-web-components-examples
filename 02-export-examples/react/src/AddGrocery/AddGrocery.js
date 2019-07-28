@@ -1,7 +1,7 @@
 import React from 'react';
+import { register } from 'web-react-components';
 
 // import './AddGrocery.css';
-
 const styles = `
   .AddGrocery {
     display: flex;
@@ -43,5 +43,9 @@ function AddGrocery(props) {
     </div>
   );
 }
+
+register(AddGrocery, 'react-add-grocery', [], {
+  addItem: e => new CustomEvent('addItem', { detail: e })
+});
 
 export default AddGrocery;
