@@ -9,7 +9,7 @@ function GroceryList(props) {
 
   return (
     <div className="GroceryList">
-      {props.items.length > 0 ? (
+      {props.items && props.items.length > 0 ? (
         <div className="main-container">
           <h1>Groceries</h1>
 
