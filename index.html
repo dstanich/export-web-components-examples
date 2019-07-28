@@ -36,7 +36,7 @@
         font-size: 1.25rem;
       }
 
-      .content {
+      .main-content {
         padding: 10px 25px;
       }
 
@@ -62,7 +62,22 @@
       }
 
       .demos {
-        padding: 0 15px;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; */
+        width: 100%;
+      }
+
+      .demo-group {
+        /* flex: 1 1 25%;
+        border: 1px solid black;
+        padding: 5px 15px;
+        margin: 0 10px; */
+      }
+
+      .demo-content {
+        padding: 10px 0;
       }
 
       .sub-heading {
@@ -89,7 +104,7 @@
       </a>
     </div>
 
-    <div class="content">
+    <div class="main-content">
       <h1>Author // GitHub</h1>
       <span
         ><a href="https://www.linkedin.com/in/davidstanich" target="_blank"
@@ -105,23 +120,32 @@
 
       <h1>Links to Demos</h1>
       <div class="demos">
-        <a class="link" href="./vanilla-web-component/"
-          >Vanilla Web Component</a
-        >
-
-        <div class="sub-heading">Sample Framework Apps</div>
-        <div class="content">
-          <a class="link" href="./sample-apps/angular/">Angular</a>
-          <a class="link" href="./sample-apps/react/">React</a>
-          <a class="link" href="./sample-apps/vue/">Vue</a>
+        <div class="demo-group">
+          <div class="sub-heading">[Web Component Basics]</div>
+          <div class="demo-content">
+            <a class="link" href="./vanilla-web-component/"
+              >Vanilla Web Component</a
+            >
+          </div>
         </div>
 
-        <div class="sub-heading">Mixed Framework Apps</div>
-        <div class="content">
-          <a class="link" href="./mixed-apps/vanilla-based/"
-            >Vanilla JS Based</a
-          >
-          <a class="link" href="./mixed-apps/react-based/">React Based</a>
+        <div class="demo-group">
+          <div class="sub-heading">[Sample Framework Apps]</div>
+          <div class="demo-content">
+            <a class="link" href="./sample-apps/angular/">Angular</a>
+            <a class="link" href="./sample-apps/react/">React</a>
+            <a class="link" href="./sample-apps/vue/">Vue</a>
+          </div>
+        </div>
+
+        <div class="demo-group">
+          <div class="sub-heading">[Mixed Framework Apps]</div>
+          <div class="demo-content">
+            <a class="link" href="./mixed-apps/vanilla-based/"
+              >Vanilla JS Based</a
+            >
+            <a class="link" href="./mixed-apps/react-based/">React Based</a>
+          </div>
         </div>
       </div>
     </div>
