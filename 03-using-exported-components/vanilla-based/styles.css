@@ -10,6 +10,13 @@ body,
   background: #c1c0bf;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
 .scrollable-area {
   display: block;
   flex: 1 1 auto;

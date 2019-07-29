@@ -18,6 +18,13 @@
         color: #552700;
       }
 
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+      }
+
       .title {
         display: flex;
         align-content: space-between;
@@ -38,6 +45,7 @@
 
       .main-content {
         padding: 10px 25px;
+        overflow: auto;
       }
 
       h1 {
@@ -62,18 +70,7 @@
       }
 
       .demos {
-        /* display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center; */
         width: 100%;
-      }
-
-      .demo-group {
-        /* flex: 1 1 25%;
-        border: 1px solid black;
-        padding: 5px 15px;
-        margin: 0 10px; */
       }
 
       .demo-content {
@@ -117,6 +114,30 @@
           >https://github.com/dstanich/export-web-components-examples</a
         ></span
       >
+
+      <h1>Exporting Notes</h1>
+      <div class="demos">
+        <div class="demo-group">
+          <a
+            class="link"
+            href="https://github.com/dstanich/export-web-components-examples/blob/master/02-export-examples/angular/README.md"
+            target="_blank"
+            >Angular</a
+          >
+          <a
+            class="link"
+            href="https://github.com/dstanich/export-web-components-examples/blob/master/02-export-examples/react/README.md"
+            target="_blank"
+            >React</a
+          >
+          <a
+            class="link"
+            href="https://github.com/dstanich/export-web-components-examples/blob/master/02-export-examples/vue/README.md"
+            target="_blank"
+            >Vue</a
+          >
+        </div>
+      </div>
 
       <h1>Links to Demos</h1>
       <div class="demos">
