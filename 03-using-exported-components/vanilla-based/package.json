@@ -10,6 +10,6 @@
     "build": "echo 'todo'"
   },
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.2"
   }
 }
